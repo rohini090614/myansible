@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+   - include_tasks: myfiles.yml
+   - name: create a folder
+    file:
+      path:
+      state:
+   -name: i want to copy files
+    copy:
+    src: mystaticfile
+    dest:/home/ubuntu/   
